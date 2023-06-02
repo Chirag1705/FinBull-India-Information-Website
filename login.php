@@ -6,7 +6,7 @@ session_start();
 // check if user is already logged in
 
 if(isset($_SESSION['username'])){
-    header("location: welcome.php");
+    header("location: index.html");
     exit;
 }
 
@@ -42,7 +42,7 @@ if($_SERVER['REQUEST_METHOD'] == "POST"){
                         $_SESSION['id'] = $id;
                         $_SESSION['loggedin'] = true;
 
-                        header("location: welcome.php");
+                        header("location: index.html");
                     }
                 }
             }
